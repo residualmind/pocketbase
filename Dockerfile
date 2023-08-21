@@ -16,4 +16,5 @@ COPY --from=download /pocketbase /usr/local/bin/pocketbase
 
 EXPOSE 8090
 
+RUN /usr/local/bin/pocketbase update
 ENTRYPOINT /usr/local/bin/pocketbase serve --http=0.0.0.0:8090 --dir=/root/pocketbase
